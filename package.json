@@ -1,0 +1,46 @@
+{
+	"name": "cinovo-isin-validator",
+	"version": "0.1.0",
+	"description": "International Securities Identification Number validator",
+	"keywords": [
+		"ISIN",
+		"International",
+		"Securities", "Identification",
+		"Number",
+		"validator"
+	],
+	"author": {
+		"name": "Michael Wittig",
+		"email": "michael.wittig@cinovo.de"
+	},
+	"contributors": [],
+	"licenses": [{
+		"type": "Apache License, Version 2.0",
+		"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+	}],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cinovo/node-isin-validator.git"
+	},
+	"dependencies": {
+		"assert-plus": "0.1.5",
+		"i18n-iso-countries": "0.0.2"
+	},
+	"devDependencies": {
+		"mocha": "1.15.1",
+		"jslint": "0.2.5",
+		"madge": "0.1.7",
+		"npmedge": "0.1.4"
+	},
+	"main": "index",
+	"engines": {
+		"node": ">= 0.6.0"
+	},
+	"scripts": {
+		"test": "make test"
+	},
+	"readmeFilename": "README.md",
+	"bugs": {
+		"url": "https://github.com/cinovo/node-isin-validator/issues"
+	}
+}
