@@ -5,6 +5,12 @@
 
 # cinovo-isin-validator
 
+Validate International Securities Identification Number (ISIN) . Checks:
+
+* if the format is correct
+* if the Country Code is correct
+* if the check digit is correct
+
 ## Getting started
 
 	npm install cinovo-isin-validator
