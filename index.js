@@ -36,7 +36,7 @@ function calcCrossSum(i) {
 
 function calculateCheckDigit(countryCode, NSIN) {
 	"use strict";
-	var i, c, s = countryCode + NSIN, nums = [], weights = [], crossSum = 0;
+	var i, c, s = countryCode + NSIN, nums = [], weights = [], crossSum = 0, diff;
 
 	for (i = 0; i < s.length; i += 1) {
 		c = s[i];
@@ -151,7 +151,11 @@ function calculateCheckDigit(countryCode, NSIN) {
 	for (i = 0; i < nums.length; i += 1) {
 		crossSum += calcCrossSum(nums[i] * weights[i]);
 	}
-	return 10 - (crossSum % 10);
+	diff = 10 - (crossSum % 10);
+	if (diff === 10) {
+		return 0;
+	}
+	return diff;
 }
 
 module.exports = function(ISIN, callback, options) {

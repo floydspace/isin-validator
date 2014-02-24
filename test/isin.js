@@ -37,6 +37,9 @@ describe("isin", function () {
 		it("valid DE0005557508", function () {
 			assert.strictEqual(isin("DE0005557508"), undefined);
 		});
+		it("valid DE0001135390", function () {
+			assert.strictEqual(isin("DE0001135390"), undefined);
+		});
 	});
 	describe("async", function () {
 		it("invalid character in ISIN", function (done) {
