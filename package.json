@@ -14,13 +14,10 @@
 		"email": "post@michaelwittig.info"
 	},
 	"contributors": [],
-	"licenses": [{
-		"type": "Apache License, Version 2.0",
-		"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-	}],
+	"license" : "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cinovo/node-isin-validator.git"
+		"url": "https://github.com/michaelwittig/node-isin-validator.git"
 	},
 	"dependencies": {
 		"assert-plus": "0.1.5",
@@ -41,6 +38,6 @@
 	},
 	"readmeFilename": "README.md",
 	"bugs": {
-		"url": "https://github.com/cinovo/node-isin-validator/issues"
+		"url": "https://github.com/michaelwittig/node-isin-validator/issues"
 	}
 }
