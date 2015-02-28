@@ -1,7 +1,7 @@
 
-[![Build Status](https://secure.travis-ci.org/cinovo/node-isin-validator.png)](http://travis-ci.org/cinovo/node-isin-validator)
+[![Build Status](https://secure.travis-ci.org/michaelwittig/node-isin-validator.png)](http://travis-ci.org/michaelwittig/node-isin-validator)
 [![NPM version](https://badge.fury.io/js/cinovo-isin-validator.png)](http://badge.fury.io/js/cinovo-isin-validator)
-[![NPM dependencies](https://david-dm.org/cinovo/node-isin-validator.png)](https://david-dm.org/cinovo/node-isin-validator)
+[![NPM dependencies](https://david-dm.org/michaelwittig/node-isin-validator.png)](https://david-dm.org/michaelwittig/node-isin-validator)
 
 # cinovo-isin-validator
 
