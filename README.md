@@ -48,7 +48,7 @@ validator("XX000A1G0AE8", function(err) {
 
 ```
 var validator = require("cinovo-isin-validator");
-if (validator("XX000A1G0AE8"), undefined, {checkCountryCode: false, checkCheckDigit: false}) {
+if (validator("XX000A1G0AE8", undefined, {checkCountryCode: false, checkCheckDigit: false}) {
 	console.log("ISIN is invalid!");
 } else {
 	console.log("ISIN is fine!");
