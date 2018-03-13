@@ -13,45 +13,53 @@ Validate International Securities Identification Number (ISIN) . Checks:
 
 ## Getting started
 
-	npm install cinovo-isin-validator
+```
+npm install cinovo-isin-validator
+```
 
 sync style
 
-	var validator = require("cinovo-isin-validator");
-	if (validator("XX000A1G0AE8")) {
-		console.log("ISIN is invalid!");
-	} else {
-		console.log("ISIN is fine!");
-	}
+```
+var validator = require("cinovo-isin-validator");
+if (validator("XX000A1G0AE8")) {
+	console.log("ISIN is invalid!");
+} else {
+	console.log("ISIN is fine!");
+}
+```
 
 async style
 
-	var validator = require("cinovo-isin-validator");
-	validator("XX000A1G0AE8", function(err) {
-		if (err) {
-			console.log("ISIN is invalid!", err);
-		} else {
-			console.log("ISIN is fine!");
-		}
-	});
-
-## Options
-
-* `checkCountryCode`: Boolean - validate of Country Code (Default: true)
-* `checkCheckDigit`: Boolean -  validate of Check Digit (Default: true)
-
-	var validator = require("cinovo-isin-validator");
-	if (validator("XX000A1G0AE8"), undefined, {checkCountryCode: false, checkCheckDigit: false}) {
-		console.log("ISIN is invalid!");
+```
+var validator = require("cinovo-isin-validator");
+validator("XX000A1G0AE8", function(err) {
+	if (err) {
+		console.log("ISIN is invalid!", err);
 	} else {
 		console.log("ISIN is fine!");
 	}
+});
+```
 
-	var validator = require("cinovo-isin-validator");
-	validator("XX000A1G0AE8", function(err) {
-		if (err) {
-			console.log("ISIN is invalid!", err);
-		} else {
-			console.log("ISIN is fine!");
-		}
-	}, {checkCountryCode: false, checkCheckDigit: false});
+## Options
+
+* `checkCountryCode`: Boolean - validate of Country Code (Default: `true`)
+* `checkCheckDigit`: Boolean -  validate of Check Digit (Default: `true`)
+
+```
+var validator = require("cinovo-isin-validator");
+if (validator("XX000A1G0AE8"), undefined, {checkCountryCode: false, checkCheckDigit: false}) {
+	console.log("ISIN is invalid!");
+} else {
+	console.log("ISIN is fine!");
+}
+
+var validator = require("cinovo-isin-validator");
+validator("XX000A1G0AE8", function(err) {
+	if (err) {
+		console.log("ISIN is invalid!", err);
+	} else {
+		console.log("ISIN is fine!");
+	}
+}, {checkCountryCode: false, checkCheckDigit: false});
+```
