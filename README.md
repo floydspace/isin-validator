@@ -1,6 +1,6 @@
 
 [![Build Status](https://travis-ci.org/floydspace/isin-validator.svg?branch=master)](https://travis-ci.org/floydspace/isin-validator)
-[![NPM version](https://badge.fury.io/js/isin-validator.svg)](http://badge.fury.io/js/isin-validator)
+[![npm version](https://badge.fury.io/js/isin-validator.svg)](https://badge.fury.io/js/isin-validator)
 [![dependencies Status](https://david-dm.org/floydspace/isin-validator/status.svg)](https://david-dm.org/floydspace/isin-validator)
 
 # isin-validator
