@@ -1,6 +1,6 @@
 {
 	"name": "isin-validator",
-	"version": "1.0.0",
+	"version": "0.3.0",
 	"description": "International Securities Identification Number validator",
 	"keywords": [
 		"ISIN",
