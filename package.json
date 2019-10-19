@@ -46,7 +46,8 @@
 	"scripts": {
 		"test": "mocha --require @babel/register",
 		"lint": "eslint .",
-		"build": "rollup --config"
+    "build": "rollup --config",
+    "prepublishOnly": "npm run build"
 	},
 	"readmeFilename": "README.md",
 	"bugs": {
