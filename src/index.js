@@ -10,6 +10,7 @@ const PSEUDO_COUNTRY_CODES = {
   QS: true,
   QT: true,
   QW: true,
+  EU: true,
 };
 
 function ret(callback, err) {
