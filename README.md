@@ -1,7 +1,7 @@
 
-[![Build Status](https://secure.travis-ci.org/floydspace/isin-validator.png)](http://travis-ci.org/floydspace/isin-validator)
-[![NPM version](https://badge.fury.io/js/isin-validator.png)](http://badge.fury.io/js/isin-validator)
-[![NPM dependencies](https://david-dm.org/floydspace/isin-validator.png)](https://david-dm.org/floydspace/isin-validator)
+[![Build Status](https://travis-ci.org/floydspace/isin-validator.svg?branch=master)](https://travis-ci.org/floydspace/isin-validator)
+[![NPM version](https://badge.fury.io/js/isin-validator.svg)](http://badge.fury.io/js/isin-validator)
+[![dependencies Status](https://david-dm.org/floydspace/isin-validator/status.svg)](https://david-dm.org/floydspace/isin-validator)
 
 # isin-validator
 
