@@ -1,5 +1,5 @@
-const assert = require('assert-plus');
-const isin = require('../index');
+import assert from 'assert-plus';
+import isin from '../src/index';
 
 describe('isin', () => {
   describe('sync', () => {

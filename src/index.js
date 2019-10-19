@@ -1,5 +1,4 @@
-const assert = require('assert-plus');
-const i18nisocountries = require('i18n-iso-countries');
+import { getName } from 'i18n-iso-countries';
 
 const PSEUDO_COUNTRY_CODES = {
   XS: true,
@@ -159,10 +158,7 @@ function calculateCheckDigit(countryCode, NSIN) {
   return diff;
 }
 
-module.exports = (ISIN, callback, options) => {
-  assert.string(ISIN, 'ISIN');
-  assert.optionalFunc(callback, 'callback');
-  assert.optionalObject(options, 'options');
+export default function (ISIN, callback, options) {
   options = options || {};
 
   if (ISIN.length !== 12) {
@@ -178,7 +174,7 @@ module.exports = (ISIN, callback, options) => {
     return ret(callback, new Error('Country code contains not only [A-Z]'));
   }
   if (options.checkCountryCode !== false) {
-    if (PSEUDO_COUNTRY_CODES[countryCode] !== true && i18nisocountries.getName(countryCode, 'de') === undefined) {
+    if (PSEUDO_COUNTRY_CODES[countryCode] !== true && getName(countryCode, 'en') === undefined) {
       return ret(callback, new Error('Country code is wrong'));
     }
   }
@@ -200,4 +196,4 @@ module.exports = (ISIN, callback, options) => {
   }
 
   return ret(callback, undefined);
-};
+}
