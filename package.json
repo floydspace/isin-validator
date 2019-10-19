@@ -1,11 +1,12 @@
 {
-	"name": "cinovo-isin-validator",
-	"version": "0.2.0",
+	"name": "isin-validator",
+	"version": "1.0.0",
 	"description": "International Securities Identification Number validator",
 	"keywords": [
 		"ISIN",
 		"International",
-		"Securities", "Identification",
+		"Securities",
+		"Identification",
 		"Number",
 		"validator"
 	],
@@ -14,30 +15,33 @@
 		"email": "post@michaelwittig.info"
 	},
 	"contributors": [],
-	"license" : "MIT",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/michaelwittig/node-isin-validator.git"
+		"url": "https://github.com/floydspace/isin-validator.git"
 	},
 	"dependencies": {
 		"assert-plus": "0.1.5",
 		"i18n-iso-countries": "0.0.2"
 	},
 	"devDependencies": {
-		"mocha": "1.15.1",
-		"jslint": "0.2.5",
-		"madge": "0.1.7",
-		"npmedge": "0.1.4"
+		"eslint": "^6.5.1",
+		"eslint-config-airbnb-base": "^14.0.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-mocha": "^6.2.0",
+		"madge": "^3.4.4",
+		"mocha": "^6.2.2"
 	},
 	"main": "index",
 	"engines": {
 		"node": ">= 0.6.0"
 	},
 	"scripts": {
-		"test": "make test"
+		"test": "mocha",
+		"lint": "eslint ."
 	},
 	"readmeFilename": "README.md",
 	"bugs": {
-		"url": "https://github.com/michaelwittig/node-isin-validator/issues"
+		"url": "https://github.com/floydspace/isin-validator/issues"
 	}
 }

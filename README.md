@@ -1,9 +1,9 @@
 
-[![Build Status](https://secure.travis-ci.org/michaelwittig/node-isin-validator.png)](http://travis-ci.org/michaelwittig/node-isin-validator)
-[![NPM version](https://badge.fury.io/js/cinovo-isin-validator.png)](http://badge.fury.io/js/cinovo-isin-validator)
-[![NPM dependencies](https://david-dm.org/michaelwittig/node-isin-validator.png)](https://david-dm.org/michaelwittig/node-isin-validator)
+[![Build Status](https://secure.travis-ci.org/floydspace/isin-validator.png)](http://travis-ci.org/floydspace/isin-validator)
+[![NPM version](https://badge.fury.io/js/isin-validator.png)](http://badge.fury.io/js/isin-validator)
+[![NPM dependencies](https://david-dm.org/floydspace/isin-validator.png)](https://david-dm.org/floydspace/isin-validator)
 
-# cinovo-isin-validator
+# isin-validator
 
 Validate International Securities Identification Number (ISIN) . Checks:
 
@@ -14,13 +14,13 @@ Validate International Securities Identification Number (ISIN) . Checks:
 ## Getting started
 
 ```
-npm install cinovo-isin-validator
+npm install isin-validator
 ```
 
 sync style
 
 ```
-var validator = require("cinovo-isin-validator");
+var validator = require("isin-validator");
 if (validator("XX000A1G0AE8")) {
 	console.log("ISIN is invalid!");
 } else {
@@ -31,7 +31,7 @@ if (validator("XX000A1G0AE8")) {
 async style
 
 ```
-var validator = require("cinovo-isin-validator");
+var validator = require("isin-validator");
 validator("XX000A1G0AE8", function(err) {
 	if (err) {
 		console.log("ISIN is invalid!", err);
@@ -47,14 +47,14 @@ validator("XX000A1G0AE8", function(err) {
 * `checkCheckDigit`: Boolean -  validate of Check Digit (Default: `true`)
 
 ```
-var validator = require("cinovo-isin-validator");
+var validator = require("isin-validator");
 if (validator("XX000A1G0AE8", undefined, {checkCountryCode: false, checkCheckDigit: false}) {
 	console.log("ISIN is invalid!");
 } else {
 	console.log("ISIN is fine!");
 }
 
-var validator = require("cinovo-isin-validator");
+var validator = require("isin-validator");
 validator("XX000A1G0AE8", function(err) {
 	if (err) {
 		console.log("ISIN is invalid!", err);
