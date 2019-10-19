@@ -1,6 +1,6 @@
 {
 	"name": "isin-validator",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "International Securities Identification Number validator",
 	"keywords": [
 		"ISIN",
@@ -46,8 +46,8 @@
 	"scripts": {
 		"test": "mocha --require @babel/register",
 		"lint": "eslint .",
-    "build": "rollup --config",
-    "prepublishOnly": "npm run build"
+		"build": "rollup --config",
+		"prepublishOnly": "npm run build"
 	},
 	"readmeFilename": "README.md",
 	"bugs": {
