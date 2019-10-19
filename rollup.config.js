@@ -7,7 +7,7 @@ export default [
     output: {
       file: 'dist/bundle.umd.js',
       format: 'umd',
-      name: 'isin-validator',
+      name: 'isinValidator',
       globals: {
         'i18n-iso-countries': 'countries',
       },
