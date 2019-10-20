@@ -1,31 +1,37 @@
-import { eslint } from 'rollup-plugin-eslint';
 import babel from 'rollup-plugin-babel';
+import { eslint } from 'rollup-plugin-eslint';
+import typescript from 'rollup-plugin-typescript2';
+
+import pkg from './package.json';
 
 export default [
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
-      file: 'dist/bundle.umd.js',
+      file: pkg.main,
       format: 'umd',
       name: 'isinValidator',
       globals: {
         'i18n-iso-countries': 'countries',
       },
     },
-    external: ['i18n-iso-countries'],
+    external: Object.keys(pkg.dependencies),
     plugins: [
-      babel(),
+      eslint(),
+      babel({ extensions: ['.ts'] }),
     ],
   },
   {
-    input: 'src/index.js',
+    input: 'src/index.ts',
     output: {
-      file: 'dist/bundle.esm.js',
+      file: pkg.module,
       format: 'esm',
+      sourcemap: true,
     },
-    external: ['i18n-iso-countries'],
+    external: Object.keys(pkg.dependencies),
     plugins: [
       eslint(),
+      typescript(),
     ],
   },
 ];

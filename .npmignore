@@ -4,4 +4,6 @@ test
 .babelrc
 .editorconfig
 .eslintrc.yml
+.mocharc.yml
 rollup.config.js
+tsconfig.json

@@ -1,5 +1,6 @@
 import assert from 'assert-plus';
-import isin from '../src/index';
+
+import isin from '../src';
 
 describe('isin', () => {
   describe('sync', () => {

@@ -13,7 +13,7 @@ const PSEUDO_COUNTRY_CODES = {
   EU: true,
 };
 
-function ret(callback, err) {
+function ret(callback: (err?: Error) => void, err?: Error) {
   if (callback !== undefined) {
     callback(err);
     return;
@@ -21,7 +21,7 @@ function ret(callback, err) {
   return err;
 }
 
-function calcCrossSum(i) {
+function calcCrossSum(i: number) {
   let qs = 0;
 
   do {
@@ -31,16 +31,14 @@ function calcCrossSum(i) {
   return qs;
 }
 
-function calculateCheckDigit(countryCode, NSIN) {
-  let i;
-  let c;
+function calculateCheckDigit(countryCode: string, NSIN: string) {
   const s = countryCode + NSIN;
-  const nums = [];
-  const weights = [];
+  const nums: number[] = [];
+  const weights: number[] = [];
   let crossSum = 0;
 
-  for (i = 0; i < s.length; i += 1) {
-    c = s[i];
+  for (let i = 0; i < s.length; i += 1) {
+    const c = s[i];
     if (c === '0') {
       nums.push(0);
     } else if (c === '1') {
@@ -141,7 +139,7 @@ function calculateCheckDigit(countryCode, NSIN) {
       nums.push(5);
     }
   }
-  for (i = 0; i < nums.length; i += 1) {
+  for (let i = 0; i < nums.length; i += 1) {
     if (i % 2 === 0) {
       weights.push(2);
     } else {
@@ -149,7 +147,7 @@ function calculateCheckDigit(countryCode, NSIN) {
     }
   }
   weights.reverse();
-  for (i = 0; i < nums.length; i += 1) {
+  for (let i = 0; i < nums.length; i += 1) {
     crossSum += calcCrossSum(nums[i] * weights[i]);
   }
   const diff = 10 - (crossSum % 10);
@@ -159,7 +157,12 @@ function calculateCheckDigit(countryCode, NSIN) {
   return diff;
 }
 
-export default function (ISIN, callback, options) {
+export interface Options {
+  checkCountryCode?: boolean;
+  checkCheckDigit?: boolean;
+}
+
+export default function (ISIN: string, callback?: (err?: Error) => void, options?: Options) {
   options = options || {};
 
   if (ISIN.length !== 12) {
@@ -185,7 +188,7 @@ export default function (ISIN, callback, options) {
     return ret(callback, new Error('NSIN contains not only [A-Z0-9]'));
   }
 
-  let checkDigit = ISIN[11];
+  let checkDigit: string | number = ISIN[11];
   if (!/^[0-9]+$/.test(checkDigit)) {
     return ret(callback, new Error('Check digit contains not only [0-9]'));
   }
@@ -196,5 +199,5 @@ export default function (ISIN, callback, options) {
     }
   }
 
-  return ret(callback, undefined);
+  return ret(callback);
 }

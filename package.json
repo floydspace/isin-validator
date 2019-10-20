@@ -1,6 +1,6 @@
 {
 	"name": "isin-validator",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "International Securities Identification Number validator",
 	"keywords": [
 		"ISIN",
@@ -26,8 +26,13 @@
 	"devDependencies": {
 		"@babel/core": "^7.6.4",
 		"@babel/preset-env": "^7.6.3",
+		"@babel/preset-typescript": "^7.6.0",
 		"@babel/register": "^7.6.2",
+		"@types/assert-plus": "^1.0.4",
+		"@typescript-eslint/eslint-plugin": "^2.4.0",
+		"@typescript-eslint/parser": "^2.4.0",
 		"assert-plus": "^1.0.0",
+		"babel-register-ts": "^7.0.0",
 		"eslint": "^6.5.1",
 		"eslint-config-airbnb-base": "^14.0.0",
 		"eslint-plugin-import": "^2.18.2",
@@ -36,16 +41,19 @@
 		"mocha": "^6.2.2",
 		"rollup": "^1.25.0",
 		"rollup-plugin-babel": "^4.3.3",
-		"rollup-plugin-eslint": "^7.0.0"
+		"rollup-plugin-eslint": "^7.0.0",
+		"rollup-plugin-typescript2": "^0.24.3",
+		"typescript": "^3.6.4"
 	},
 	"main": "dist/bundle.umd.js",
 	"module": "dist/bundle.esm.js",
+	"types": "dist/index.d.ts",
 	"engines": {
 		"node": ">= 0.6.0"
 	},
 	"scripts": {
-		"test": "mocha --require @babel/register",
-		"lint": "eslint .",
+		"test": "mocha",
+		"lint": "eslint . --ext .ts --ignore-path .gitignore",
 		"build": "rollup --config",
 		"prepublishOnly": "npm run build"
 	},
