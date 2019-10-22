@@ -1,4 +1,6 @@
-import { getName } from 'i18n-iso-countries';
+import { getName, registerLocale } from 'i18n-iso-countries';
+
+registerLocale(require('i18n-iso-countries/langs/en.json'));
 
 const PSEUDO_COUNTRY_CODES = {
   XS: true,

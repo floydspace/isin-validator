@@ -9,11 +9,7 @@ export default [
     input: 'src/index.ts',
     output: {
       file: pkg.main,
-      format: 'umd',
-      name: 'isinValidator',
-      globals: {
-        'i18n-iso-countries': 'countries',
-      },
+      format: 'cjs',
     },
     external: Object.keys(pkg.dependencies),
     plugins: [
