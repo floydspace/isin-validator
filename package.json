@@ -37,7 +37,7 @@
 		"eslint-config-airbnb-base": "^14.0.0",
 		"eslint-plugin-import": "^2.18.2",
 		"eslint-plugin-mocha": "^6.2.0",
-		"madge": "^3.4.4",
+		"madge": "^4.0.1",
 		"mocha": "^6.2.2",
 		"rollup": "^1.25.0",
 		"rollup-plugin-babel": "^4.3.3",
